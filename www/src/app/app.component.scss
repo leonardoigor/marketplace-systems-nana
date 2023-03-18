@@ -1,0 +1,14 @@
+#main-nav {
+  background-color: red;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  max-height: 96px;
+  height: 100%;
+
+  ul {
+    background-color: blue;
+    display: flex;
+  }
+}
