@@ -47,11 +47,11 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: build
-          path: www/dist
+          path: www
 
       - name: Deploy to GitPages
         uses: peaceiris/actions-gh-pages@v3
         with:
-          path: www/dist
+          path: www
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: www/dist
+          publish_dir: www
