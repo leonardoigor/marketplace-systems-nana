@@ -1,14 +1,25 @@
-import express from 'express';
+import express, { Locals, Request, Response } from 'express';
 class Server {
-    listen(port: number, callback: () => void) {
-        this.app.listen(port, callback);
-    }
+    public app: express.Application;
     constructor() {
         this.app = express();
         this.config();
         this.routes();
+        this.staticFolder('src\\render');
     }
-    public app: express.Application;
+    post(path: string, cb: (req: any, res: any) => void) {
+
+        this.app.post(path, (req, res) => cb(req, res));
+    }
+    staticFolder(path: string) {
+        this.app.use(express.static(path));
+    }
+    get(path: string, callback: (req: Request<any, any, any, any, Record<string, any>>, res: Response<any, any>) => void) {
+        this.app.get(path, (req, res) => callback(req, res));
+    }
+    listen(port: number, callback: () => void) {
+        this.app.listen(port, callback);
+    }
     private config(): void {
         this.app.use(express.json());
         this.app.use(express.urlencoded({ extended: false }));

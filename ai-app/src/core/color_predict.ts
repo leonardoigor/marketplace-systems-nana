@@ -7,11 +7,11 @@ class ColorPredict {
     }
     constructor() {
         this.model = this.makeModel();
-        const x = [[0, 0, 0], [255, 255, 255]]
-        const y = [[1, 0], [0, 1]]
-        this.train(x, y).then(() => {
-            console.log('ColorPredict train done');
-        });
+        // const x = [[0, 0, 0], [255, 255, 255]]
+        // const y = [[1, 0], [0, 1]]
+        // this.train(x, y).then(() => {
+        //     console.log('ColorPredict train done');
+        // });
         console.log('ColorPredict constructor');
     }
     color_normalize(color: number) {
@@ -34,9 +34,9 @@ class ColorPredict {
         });
         // save model
         // const saveResult = await this.model.save('./');
-        this.predict([[0, 0, 0], [255, 255, 255]]).then((result) => {
-            console.log('ColorPredict predict', result);
-        });
+        // this.predict([[0, 0, 0], [255, 255, 255]]).then((result) => {
+        //     console.log('ColorPredict predict', result);
+        // });
         console.log('ColorPredict train',);
     }
     async predict(input: number[][]): Promise<boolean[]> {
