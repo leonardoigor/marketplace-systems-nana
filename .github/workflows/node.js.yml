@@ -38,6 +38,7 @@ jobs:
         with:
           name: build
           path: ./build
+      - run: ls -la
   deploy:
     runs-on: ubuntu-latest
     needs: build
