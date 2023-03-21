@@ -49,13 +49,9 @@ jobs:
           name: build
           path: www/dist
 
-      - uses: actions/checkout@v3
       - name: Deploy to GitPages
         uses: peaceiris/actions-gh-pages@v3
         with:
           path: www/dist
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: www/dist
-          FOLDER: www/dist
-          BRANCH: gh-pages
-          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
