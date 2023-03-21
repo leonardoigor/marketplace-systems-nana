@@ -47,4 +47,4 @@ jobs:
       - name: Deploy to GitPages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: www/build
+          folder: www/dist
