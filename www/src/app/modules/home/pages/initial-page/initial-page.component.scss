@@ -1,0 +1,131 @@
+.hero {
+  background-image: url('https://beeteeshop.com/wp-content/uploads/2022/10/pokemon-clother-watashi-ni-tenshi-ga-maiorita-precious-friends-anime-trending-unisex-sweatshirtmnean.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+
+  h2 {
+    font-size: 48px;
+    margin: 0;
+  }
+
+  p {
+    font-size: 24px;
+    margin: 20px 0;
+  }
+}
+
+
+.button {
+  background-color: #fff;
+  color: #212529;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 18px;
+
+  &:hover {
+    background-color: #212529;
+    color: #fff;
+  }
+}
+
+
+.featured {
+  margin-top: 50px;
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+
+    li {
+      margin: 0 20px;
+      position: relative;
+
+      img {
+        width: 100%;
+        max-width: 300px;
+        height: 100%;
+        display: block;
+        margin-bottom: 10px;
+        transition: transform .3s ease-in-out;
+
+
+      }
+
+      h3 {
+        position: absolute;
+        font-size: 24px;
+        margin: 10px 0;
+        color: #212529;
+        bottom: 20px;
+        visibility: hidden;
+        opacity: 0;
+      }
+
+      p {
+        font-size: 18px;
+        margin: 0;
+        color: #666;
+        position: absolute;
+        bottom: 10px;
+        visibility: hidden;
+        opacity: 0;
+      }
+
+      &:hover {
+        h3 {
+          transition: all 0s 0.3s;
+          visibility: visible;
+          opacity: 100;
+        }
+
+        p {
+          visibility: visible;
+          transition: all 0s 0.3s;
+          opacity: 100;
+        }
+
+        img {
+          background: unset !important;
+          background-image: url("https://beeteeshop.com/wp-content/uploads/2022/10/pokemon-clother-watashi-ni-tenshi-ga-maiorita-precious-friends-anime-trending-unisex-sweatshirtlbzms.jpg") !important;
+          transform: rotateY(180deg);
+        }
+
+
+      }
+
+    }
+  }
+
+
+
+}
+
+
+
+
+.promo {
+  background-color: #f0ad4e;
+  text-align: center;
+  padding: 50px;
+
+  h2 {
+    font-size: 36px;
+    margin: 0;
+  }
+
+  p {
+    font-size: 24px;
+    margin: 20px 0;
+  }
+}
