@@ -31,6 +31,11 @@ jobs:
           cache-dependency-path: ./www/package-lock.json
       - run: npm install
       - run: npm run build
+      - name: Upload build
+        uses: actions/upload-artifact@v2
+        with:
+          name: build
+          path: ./www/build
   deploy:
     runs-on: ubuntu-latest
     needs: build
