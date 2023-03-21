@@ -53,6 +53,7 @@ jobs:
       - name: Deploy to GitPages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
+          path: www/dist
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: www/dist
           FOLDER: www/dist
