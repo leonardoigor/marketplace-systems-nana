@@ -37,7 +37,7 @@ jobs:
         if: always()
         with:
           name: build
-          path: ./build
+          path: ./dist
       - run: ls -la
   deploy:
     runs-on: ubuntu-latest
