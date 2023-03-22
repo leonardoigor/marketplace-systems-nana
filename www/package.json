@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve --disable-host-check",
-    "build": "ng build --configuration production --base-href /test",
+    "build": "ng build --configuration production --base-href /marketplace-systems-nana/",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
